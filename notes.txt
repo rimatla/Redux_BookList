@@ -1,0 +1,46 @@
+To start app:
+$npm install --save
+$webpack
+$npm start
+- Go to localhost 8080
+
+- Redux is a predictable state container for JavaScript applications. Aka (A collection of all the data that describes the app)
+- What it means is:
+a) Redux takes care of the data layer of an application, b) React will take of the view layer of an application
+
+- The difference from Angular, Backbone etc?
+- With Redux we centralize all the the app's data inside of a single object. Which refer to as the application level state.
+
+- Application Level State:
+a) Is the app as a whole, a global object that contains all the data of our application.
+
+***************************************************************************************************************************
+- Redux keeps track of the current state of the app, and the data that tells a component what and how they should render.
+***************************************************************************************************************************
+
+
+*****************
+- Reducers:
+- A reducer is a function that returns a piece of the application state. It producers the value of the app's state
+- Since an app can have many different pieces of state, therefore we can have many different reducers.
+
+
+*****************
+- Wiring Redux to React
+//React and Redux are two separate libraries, through the use of 'react-redux' library we are able to wire the two together
+
+
+*****************
+- Container
+//A container is a react component that has a direct access to the state managed by redux
+
+**********************
+- Container and State
+//In general we want the most parent component that cares about a particular state to be a container.
+//Only the most parent component that uses a particular piece of state needs to be connected to Redux.
+//Whenever we forge a connection between a component and Redux, it turns that component into a container.
+
+
+**********************
+- connect()
+//connect takes a function and a component and produces a container
