@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 //React and Redux are two separate libraries, through the use of 'react-redux' library we are able to wire the two together
 import { connect } from 'react-redux';
+import { selectBook } from '../actions/index'; //action creator
+import { bindActionCreators } from 'redux'; //used to bind reducers and action creators
 
 //export default class BookList extends Component {
 class BookList extends Component {
@@ -9,7 +11,13 @@ class BookList extends Component {
         //map and create lists
         return this.props.books.map((book) => {
             return (
-                <li key={book.title} className="list-group-item">{book.title}</li>
+                <li
+                    key={book.title}
+                    onClick={() => this.props.selectBook(book) }
+                    className="list-group-item">
+                    {book.title}
+
+                </li>
             )
         });
     }
@@ -31,10 +39,15 @@ function mapStateToProps(state) { //state contains the array of books and the ac
 
 }
 
-//whenever we create a container, we want to export the container and not the plain component above.
+//anything returned from this function will end up as props on the BookList container.
+function mapDispatchToProps(dispatch) {
+    //whenever selectBook is called, pass results to all of our reducers
+    return bindActionCreators({selectBook: selectBook}, dispatch)
+}
 
+//whenever we create a container, we want to export the container and not the plain component above.
 //this is the connection between Redux and our component
-export default connect(mapStateToProps)(BookList) //connect takes a function and a component and produces a container
+export default connect(mapStateToProps, mapDispatchToProps)(BookList) //connect takes a function and a component and produces a container
 
 
 //In general we want the most parent component that cares about a particular state to be a container.

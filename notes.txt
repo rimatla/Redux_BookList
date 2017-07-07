@@ -4,6 +4,10 @@ $webpack
 $npm start
 - Go to localhost 8080
 
+**********************
+- Redux serves to construct the application state and React provides the views to display.
+
+**********************
 - Redux is a predictable state container for JavaScript applications. Aka (A collection of all the data that describes the app)
 - What it means is:
 a) Redux takes care of the data layer of an application, b) React will take of the view layer of an application
@@ -44,3 +48,14 @@ a) Is the app as a whole, a global object that contains all the data of our appl
 **********************
 - connect()
 //connect takes a function and a component and produces a container
+
+**********************
+- Redux serves to construct the application state and React provides the views to display.
+
+
+**********************
+- Actions Creators
+//Changing our state is what actions and actions creators are for.
+//Action Creators is a function that returns an action.
+//The actions just flow through our different reducers. Reducers can then use that action to produce a different value for its particular state.
+//In the book list ex the action creator returns an object, the object has a type and some data that further describes the action.
