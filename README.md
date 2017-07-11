@@ -1,1 +1,1 @@
-# Redux wired to a React app
+# [BookList](http://rimatlabooklist.surge.sh/) App Redux wired to React.
