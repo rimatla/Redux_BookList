@@ -59,3 +59,25 @@ a) Is the app as a whole, a global object that contains all the data of our appl
 //Action Creators is a function that returns an action.
 //The actions just flow through our different reducers. Reducers can then use that action to produce a different value for its particular state.
 //In the book list ex the action creator returns an object, the object has a type and some data that further describes the action.
+
+
+************************************************************************************************************************************************************************
+- Redux helps separate the DATA consumed by an app from the VIEW used to display the app.
+- Redux steps in as the DATA layer of the app, whereas React becomes the VIEW layer of the app.
+- We centralize all the app data inside of a SINGLE object also referred as application level STATE.
+- Redux contains the state of an app and the data that tells a component how and what they should render.
+
+- Reducer is a function that returns a piece of the app state
+
+- A container is a React component that has a direct connection to the state managed by Redux.
+- In general we want the most parent component that cares about a particular piece of state to be a container
+- Only the most parent component that cares about a particular piece of state needs to be wired to Redux.
+- Whenever we forge a connection between a component and Redux, it turns that component into a container.
+
+- Actions and Action Creators are for changing state
+- Action Creator is a function that returns an action/object
+- ALL Actions flow through ALL Reducers.
+- Reducers can choose to return a diff piece of state, depending on the Action (hences SWITCH statement).
+- A Reducer doesn't have to react to every Action if the same is has no relation to the given Reducer, therefore this Reducer will just return its
+current state without changes.
+
