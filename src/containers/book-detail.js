@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 
 class BookDetail extends Component {
     render() {
-        //prevent TypeError: Cannot read property 'title' of null
-        if (!this.props.book) { //when we first boot the app up, props.book is null, so we enter this case here.
+        //prevent TypeError: Cannot read property 'title' of null (see reducer_active_book)
+        if (!this.props.book) { //when we first load the app, props.book is null, so we enter this case here.
             return <div>Select a book to get started.</div>
         }
         return(

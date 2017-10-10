@@ -4,9 +4,8 @@ import ActiveBook from './reducer_active_book';
 
 //root reducer
 const rootReducer = combineReducers({
-  //key goes for the app, values retrieved form the created reducers
+  //key goes for the app, values corresponds to the newly created reducers
     books: BooksReducer,
     activeBook: ActiveBook
 });
-
 export default rootReducer;

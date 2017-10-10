@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//React and Redux are two separate libraries, through the use of 'react-redux' library we are able to wire the two together
 import { connect } from 'react-redux';
 import { selectBook } from '../actions/index'; //action creator
 import { bindActionCreators } from 'redux'; //used to bind reducers and action creators
@@ -7,7 +6,7 @@ import { bindActionCreators } from 'redux'; //used to bind reducers and action c
 //A container is a react component that has a direct access to the state managed by redux
 class BookList extends Component {
     renderList() {
-        //map through books
+        //loop through books
         return this.props.books.map((book) => {
             return (
                 <li
